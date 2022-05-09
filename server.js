@@ -15,8 +15,5 @@ app.use('/', express.static(__dirname + '/app/'));
 app.get('/', (req, res) => {
 	res.sendFile('home.html', { root: './app/views' });
 });
-app.get('/shopping_cart', (req, res) => {
-	res.sendFile('shopping_cart.html', { root: './app/views' });
-});
 
 app.listen(port, () => {});
