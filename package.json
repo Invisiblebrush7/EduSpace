@@ -1,0 +1,23 @@
+{
+	"name": "eduspace",
+	"version": "1.0.0",
+	"description": "Proyecto Final Web01",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DANS03/EduSpace.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DANS03/EduSpace/issues"
+	},
+	"homepage": "https://github.com/DANS03/EduSpace#readme",
+	"dependencies": {
+		"express": "^4.18.1",
+		"nodemon": "^2.0.16"
+	}
+}
