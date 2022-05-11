@@ -21,6 +21,12 @@ app.get('/materias', (req, res) => {
 app.get('/profesores', (req, res) => {
 	res.sendFile('teachers.html', { root: './app/views' });
 });
+app.get('/sign_up', (req, res) => {
+	res.sendFile('signUp.html', { root: './app/views' });
+});
+app.get('/login', (req, res) => {
+	res.sendFile('login.html', { root: './app/views' });
+});
 
 app.use('/', router); // Use the file of router to get routes
 app.listen(port, () => {});
