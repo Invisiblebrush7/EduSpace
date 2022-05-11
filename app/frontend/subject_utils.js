@@ -20,10 +20,10 @@ function subjectToHTML(subject, teacher) {
 }
 
 function subjectsListToHTML(data) {
-	let mainList = `<div id="mainList">`;
+	let mainList = '';
 
 	for (let i = 0; i < data[0].length; i++) {
 		mainList += subjectToHTML(data[0][i], data[1][i]);
 	}
-	return mainList + '</div>';
+	return mainList;
 }

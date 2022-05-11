@@ -1,8 +1,15 @@
 'use strict';
 
 const express = require('express');
+const DataHandlerTeacher = require('../controllers/dataHandlerTeacher');
 const router = express.Router();
-const dataHandler = require('../controllers/dataHandlerTeacher');
+
+router.route('/get').get((req, res) => {
+	let teachers = undefined;
+	teachers = DataHandlerTeacher.getTeachers();
+	if (teachers !== undefined) res.status(200).json(teachers);
+	else res.status(400).send('Error');
+});
 
 router.route('/:id').get((req, res) => {
 	if (req.params.id !== undefined) {
