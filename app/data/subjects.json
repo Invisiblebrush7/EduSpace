@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Materia 1",
+		"description": "Descripción 1",
+		"requiresOneBefore": false,
+		"teacherID": 1,
+		"id": 1
+	},
+	{
+		"name": "Materia 2",
+		"description": "Descripción 2",
+		"requiresOneBefore": false,
+		"teacherID": 2,
+		"id": 2
+	},
+	{
+		"name": "Materia 3",
+		"description": "Descripción 3",
+		"requiresOneBefore": true,
+		"teacherID": 3,
+		"id": 3
+	},
+	{
+		"name": "Materia 4",
+		"description": "Descripción 4",
+		"requiresOneBefore": true,
+		"teacherID": 4,
+		"id": 4
+	}
+]

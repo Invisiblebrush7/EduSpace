@@ -1,129 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/1660a4ed43.js" crossorigin="anonymous"></script>
 
-    <script src="https://kit.fontawesome.com/1660a4ed43.js" crossorigin="anonymous"></script>
+		<title>EduSpace Index</title>
+	</head>
 
-    <title>EduSpace Index</title>
-</head>
+	<style>
+		.navbar-nav > li {
+			font-size: 28;
+		}
 
-<style>
-    .navbar-nav>li {
-        font-size: 28;
-    }
-    
-    a.nav-link:hover {
-        text-decoration-line: underline;
-        text-decoration-color: #A73447;
-    }
-    
-    #circle {
-        width: 120px;
-        height: 120px;
-        padding: 10px 16px;
-        border-radius: 150px;
-        font-size: 24px;
-        line-height: 1.33;
-        margin-top: 25px;
-        margin-left: 20px;
-    }
-</style>
+		a.nav-link:hover {
+			text-decoration-line: underline;
+			text-decoration-color: #a73447;
+		}
 
-<body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+		#circle {
+			width: 120px;
+			height: 120px;
+			padding: 10px 16px;
+			border-radius: 150px;
+			font-size: 24px;
+			line-height: 1.33;
+			margin-top: 25px;
+			margin-left: 20px;
+		}
+	</style>
 
-        <a class="navbar-brand" style="margin-left: 50px;" href="#">EduSpace</a>
+	<body>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<a class="navbar-brand" style="margin-left: 50px" href="#">EduSpace</a>
 
+			<div class="collapse navbar-collapse d-flex flex-column justify-content-around" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Profesores</a>
+					</li>
+					<li>
+						<div class="input-group" id="search">
+							<input
+								type="search"
+								class="form-control"
+								placeholder="Buscar profesores"
+								aria-label="Search"
+								aria-describedby="search-addon"
+								style="border-radius: 25px; width: 350px"
+							/>
+							<span class="input-group-text border-0" id="search-addon" style="border-radius: 50px">
+								<i style="color: #a73447" class="fas fa-search" style="border-radius: 50px"></i>
+							</span>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Materias </a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="d-flex-column justify-content-center mt-5">
+			<div class="d-flex justify-content-center">
+				<h1>Encuentra al profesor que tu aprendizaje necesita</h1>
+			</div>
+			<div class="d-flex justify-content-center">
+				<hr style="width: 535px; text-align: center; color: #a73447" />
+			</div>
+		</div>
 
-        <div class="collapse navbar-collapse d-flex flex-column justify-content-around" id="navbarSupportedContent">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-5">
+					<div id="teacherCard">
+						<div class="d-flex justify-content-start-sm" style="border: 1px solid #000">
+							<button id="circle"></button>
+							<div class="col-md-6 col-sm-3">
+								<p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
+								<p style="margin-left: 5px; font-size: 30px">Alejandro Ramírez</p>
+								<p style="margin-left: 5px; font-size: 18px">Álgebra Lineal, Ecuaciones Diferenciales</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-            <ul class="navbar-nav ">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Profesores</a>
-                </li>
-                <li>
-                    <div class="input-group " id="search">
-                        <input type="search" class="form-control" placeholder="Buscar profesores" aria-label="Search" aria-describedby="search-addon" style="border-radius: 25px; width: 350px;" />
-                        <span class="input-group-text border-0" id="search-addon" style="border-radius: 50px;">
-                            <i style="color: #A73447;" class="fas fa-search" style="border-radius: 50px;"></i>
-                        </span>
-                    </div>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Materias </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="d-flex-column    justify-content-center mt-5">
-        <div class="d-flex justify-content-center">
-            <h1>Encuentra al profesor que tu aprendizaje necesita</h1>
-        </div>
-        <div class="d-flex justify-content-center">
-            <hr style="width:535px;text-align:center;color: #A73447;">
-        </div>
-    </div>
+				<div class="col-md-6 col-sm-3" id="teacherInfo">
+					<div class="d-flex-column justify-content-center mt-5">
+						<h2 style="text-align: center">Alejandro Ramírez</h2>
+						<p style="text-align: center">Profesor(a)</p>
+						<hr style="width: 100%; text-align: center; color: #a73447" />
+						<strong>Materias que imparte:</strong>
+						<ul>
+							<li>Álgebra Lineal</li>
+							<li>Ecuaciones Diferenciales</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<nav class="navbar fixed-bottom navbar-dark bg-dark justify-content-center">
+			<a class="navbar-brand" id="navTextBrand" href="#">EduSpace</a>
+		</nav>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-5">
-                <div id="teacherCard">
-                    <div class="d-flex justify-content-start-sm" style="border:1px solid #000;">
-                        <button id="circle"></button>
-                        <div class="col-md-6 col-sm-3">
-                            <p style="margin-top: 20px;margin-left: 5px;">Profesor(a)</p>
-                            <p style="margin-left: 5px;font-size:30px ">Alejandro Ramírez</p>
-                            <p style="margin-left: 5px;font-size:18px ;">Álgebra Lineal, Ecuaciones Diferenciales</p>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-sm-3" id="teacherInfo">
-                <div class="d-flex-column    justify-content-center mt-5">
-                    <h2 style="text-align: center;">Alejandro Ramírez</h2>
-                    <p style="text-align: center;">Profesor(a)</p>
-                    <hr style="width:100%;text-align:center;color: #A73447;">
-                    <strong>Materias que imparte:</strong>
-                    <ul>
-                        <li>Álgebra Lineal</li>
-                        <li>Ecuaciones Diferenciales</li>
-                    </ul>
-
-
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-
-    <nav class="navbar fixed-bottom  navbar-dark bg-dark justify-content-center ">
-        <a class="navbar-brand" id="navTextBrand" href="#">EduSpace</a>
-
-    </nav>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-</body>
-
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<script src="../frontend/subjects_index.js"></script>
+	</body>
 </html>
