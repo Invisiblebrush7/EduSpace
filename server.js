@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 	res.sendFile('home.html', { root: './app/views' });
 });
 app.get('/profesores', (req, res) => {
-	res.sendFile('index.html', { root: './app/views' });
+	res.sendFile('courses.html', { root: './app/views' });
 });
 
 app.listen(port, () => {});
