@@ -15,7 +15,7 @@
 
 		<script src="https://kit.fontawesome.com/1660a4ed43.js" crossorigin="anonymous"></script>
 
-		<title>EduSpace Index</title>
+		<title>EduSpace Teachers</title>
 	</head>
 
 	<style>
@@ -38,34 +38,28 @@
 			margin-top: 25px;
 			margin-left: 20px;
 		}
+
+		.checked {
+			color: #a73447;
+		}
 	</style>
 
 	<body>
 		<nav class="navbar navbar-expand-sm navbar-light bg-light">
-			<a class="navbar-brand" style="margin-left: 50px" href="#">EduSpace</a>
+			<a class="navbar-brand" style="margin-left: 50px" href="Home.html">EduSpace</a>
 
-			<div class="collapse navbar-collapse d-flex flex-column justify-content-around" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse d-flex flex-column justify-content-between" id="navbarSupportedContent">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link" href="#">Profesores</a>
 					</li>
-					<li>
-						<div class="input-group" id="search">
-							<input
-								type="search"
-								class="form-control"
-								placeholder="Buscar profesores"
-								aria-label="Search"
-								aria-describedby="search-addon"
-								style="border-radius: 25px; width: 350px"
-							/>
-							<span class="input-group-text border-0" id="search-addon" style="border-radius: 50px">
-								<i style="color: #a73447" class="fas fa-search" style="border-radius: 50px"></i>
-							</span>
-						</div>
-					</li>
+
 					<li class="nav-item">
-						<a class="nav-link" href="#">Materias </a>
+						<a class="nav-link" href="Courses.html">Materias </a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="logIn.html"><i class="fa-solid fa-user" Style=" margin-left: 20px;"></i> </a>
 					</li>
 				</ul>
 			</div>
@@ -100,9 +94,13 @@
 						<p style="text-align: center">Profesor(a)</p>
 						<hr style="width: 100%; text-align: center; color: #a73447" />
 						<strong>Materias que imparte:</strong>
-						<ul>
-							<li>Álgebra Lineal</li>
-							<li>Ecuaciones Diferenciales</li>
+						<ul id="Courses">
+							<li>
+								<div class="d-flex justify-content-between">
+									<p id="CourseName">Álgebra Lineal</p>
+									<a class="fa fa-star checked" id="Grade" href="reviews.html">2.5</a>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -118,6 +116,5 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
-		<script src="../frontend/subjects_index.js"></script>
 	</body>
 </html>
