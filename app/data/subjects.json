@@ -1,30 +1,30 @@
 [
 	{
-		"name": "Materia 1",
-		"description": "Descripción 1",
-		"requiresOneBefore": false,
-		"teacherID": 1,
-		"id": 1
+		"_name": "Materia 1",
+		"_description": "Descripción 1",
+		"_requiresOneBefore": false,
+		"_teacherID": 1,
+		"_id": 1
 	},
 	{
-		"name": "Materia 2",
-		"description": "Descripción 2",
-		"requiresOneBefore": false,
-		"teacherID": 2,
-		"id": 2
+		"_name": "Materia 2",
+		"_description": "Descripción 2",
+		"_requiresOneBefore": false,
+		"_teacherID": 2,
+		"_id": 2
 	},
 	{
-		"name": "Materia 3",
-		"description": "Descripción 3",
-		"requiresOneBefore": true,
-		"teacherID": 3,
-		"id": 3
+		"_name": "Materia 3",
+		"_description": "Descripción 3",
+		"_requiresOneBefore": true,
+		"_teacherID": 3,
+		"_id": 3
 	},
 	{
-		"name": "Materia 4",
-		"description": "Descripción 4",
-		"requiresOneBefore": true,
-		"teacherID": 4,
-		"id": 4
+		"_name": "Materia 4",
+		"_description": "Descripción 4",
+		"_requiresOneBefore": true,
+		"_teacherID": 4,
+		"_id": 4
 	}
 ]

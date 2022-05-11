@@ -1,8 +1,8 @@
 const express = require('express');
-const teachersRouter = require('../routes/teachers');
+const subjects = require('../routes/subjects');
 
 const router = express.Router();
 
-router.use('/materias', teachersRouter);
+router.use('/materias', subjects);
 
 module.exports = router;

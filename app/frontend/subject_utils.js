@@ -1,13 +1,13 @@
-const productsURL = 'http://localhost:3000/profesores';
+const subjectsURL = 'http://localhost:3000/materias/get';
 
 function productToHTML(subject) {
 	let name = subject.name;
 	let description = subject.description;
 	let requiresOneBefore = subject.requiresOneBefore;
-	let teacherID = subject.teacherID;
+	let teacherID = subject.id;
 	let id = subject.id;
 
-	let productHTML = ``;
+	let productHTML = `<div></div>`;
 	return productHTML;
 }
 
@@ -22,11 +22,11 @@ function productListToHTML(products) {
 			<button id="circle"></button>
 			<div class="col-md-6 col-sm-3">
 				<p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
-				<p style="margin-left: 5px; font-size: 30px">${productToHTML.teacherID.name}</p>
+				<p style="margin-left: 5px; font-size: 30px">${productToHTML.id}</p>
 				<p style="margin-left: 5px; font-size: 18px">${productToHTML.name}</p>
 			</div>
 		</div>
 	</div>
     `;
-	return productsAsHTML;
+	return '<h1> Hi </h1>';
 }

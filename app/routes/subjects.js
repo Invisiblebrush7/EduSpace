@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const dataHandler = require('../controllers/dataHandler');
 
-router.route('/').get((req, res) => {
+router.route('/get').get((req, res) => {
 	let subjects = undefined;
 	if (req.query.filter === undefined) {
 		subjects = dataHandler.getSubjects();
