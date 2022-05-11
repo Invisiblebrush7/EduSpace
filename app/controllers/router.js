@@ -3,6 +3,6 @@ const teachersRouter = require('../routes/teachers');
 
 const router = express.Router();
 
-router.use('/profesores', teachersRouter);
+router.use('/materias', teachersRouter);
 
 module.exports = router;
