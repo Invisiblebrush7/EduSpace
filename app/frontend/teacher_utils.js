@@ -7,9 +7,9 @@ function teacherToHTML(teacher) {
 				<button id="circle"></button>
 				<div class="col-md-6 col-sm-3">
 					<p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
-					<p style="margin-left: 5px; font-size: 30px">${teacher._name}</p>
-					<p style="margin-left: 5px; font-size: 18px">Edad: ${teacher._age}</p>
-					<p style="margin-left: 5px; font-size: 18px">Email: ${teacher._email}</p>
+					<p style="margin-left: 5px; font-size: 30px">${teacher.name}</p>
+					<p style="margin-left: 5px; font-size: 18px">Edad: ${teacher.age}</p>
+					<p style="margin-left: 5px; font-size: 18px">Email: ${teacher.email}</p>
 				</div>
 			</div>
 		</div>

@@ -5,6 +5,7 @@ async function getSubjects() {
 		event.preventDefault();
 	}
 	let subjects = await loadSubjects(subjectsURL);
+
 	let container = document.getElementById('mainList');
 	container.innerHTML = subjectsListToHTML(subjects);
 }

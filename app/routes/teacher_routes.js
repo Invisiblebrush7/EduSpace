@@ -4,23 +4,26 @@ const express = require('express');
 const DataHandlerTeacher = require('../controllers/dataHandlerTeacher');
 const router = express.Router();
 
-router.route('/get').get((req, res) => {
-	let teachers = undefined;
-	teachers = DataHandlerTeacher.getTeachers();
-	if (teachers !== undefined) res.status(200).json(teachers);
-	else res.status(400).send('Error');
+const TeacherSchema = require('../models/teacherModel');
+
+router.route('/get').get(async (req, res) => {
+	try {
+		const teachers = await TeacherSchema.find();
+		console.log(teachers);
+		if (!teachers) throw Error('No teachers found');
+		res.status(200).json(teachers);
+	} catch (err) {
+		res.status(400).json({ msg: err });
+	}
 });
 
-router.route('/:id').get((req, res) => {
-	if (req.params.id !== undefined) {
-		let teacher = dataHandler.getTeacherByID(req.params.id);
-		if (teacher !== undefined) {
-			res.status(200).json(teacher);
-		} else {
-			res.status(404).send(':(');
-		}
-	} else {
-		return undefined;
+router.route('/:id').get(async (req, res) => {
+	try {
+		const teacher = await TeacherSchema.findById(req.params.id);
+		if (!teacher) throw Error('No teachers found');
+		res.status(200).json(teacher);
+	} catch (err) {
+		res.status(400).json({ msg: err });
 	}
 });
 

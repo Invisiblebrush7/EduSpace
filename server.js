@@ -2,10 +2,22 @@
 const express = require('express');
 const router = require('./app/controllers/router');
 
+const mongoose = require('mongoose');
+const cors = require('cors');
+const { MONGO_URI } = require('./config');
+
 const app = express();
 const port = 3000;
 
+app.use(cors());
+
 app.use(express.json()); // Use express body-parser to parse all request bodies
+
+// Connect to mongoose
+mongoose
+	.connect(MONGO_URI)
+	.then(() => console.log('MongoDB conected'))
+	.catch((err) => console.log(err));
 
 // app.use('/public', express.static(__dirname + '/app/public'));
 app.use('/', express.static(__dirname + '/app/'));
