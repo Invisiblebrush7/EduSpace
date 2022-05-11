@@ -1,4 +1,4 @@
-const productsURL = 'http://localhost:3000/products';
+const productsURL = 'http://localhost:3000/profesores';
 
 function teachersToHTML(subject) {
 
