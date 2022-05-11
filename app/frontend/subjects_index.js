@@ -6,6 +6,13 @@ async function getSubjects() {
 	}
 	let subjects = await loadsubjects(subjectsURL);
 	let container = document.getElementById('mainList');
-	container.innerHTML = productListToHTML(subjects);
+	container.innerHTML = subjectsListToHTML(subjects);
+}
+async function getTeacherByID(id) {
+	if (event !== undefined) {
+		event.preventDefault();
+	}
+	let teacher = await loadTeacherByID('http://localhost:3000/maestros/' + id);
+	return teacher;
 }
 getSubjects();

@@ -1,8 +1,7 @@
 const subjectsURL = 'http://localhost:3000/materias/get';
 
-function subjectToHTML(subject) {
-	let name = subject.name;
-	let id = subject.teacherID;
+function subjectToHTML(subject, teacher) {
+	let name = subject._name;
 
 	let teacherHTML = `
 		<div id="teacherCard">
@@ -10,8 +9,8 @@ function subjectToHTML(subject) {
 				<button id="circle"></button>
 				<div class="col-md-6 col-sm-3">
 					<p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
-					<p style="margin-left: 5px; font-size: 30px">${id}</p>
-					<p style="margin-left: 5px; font-size: 18px">${name}</p>
+					<p style="margin-left: 5px; font-size: 30px">${name}</p>
+					<p style="margin-left: 5px; font-size: 18px">${teacher._name}</p>
 				</div>
 			</div>
 		</div>
@@ -20,12 +19,11 @@ function subjectToHTML(subject) {
 	return teacherHTML;
 }
 
-function subjectsListToHTML(subjects) {
+function subjectsListToHTML(data) {
 	let mainList = `<div id="mainList">`;
 
-	subjects.forEach((subject) => {
-		mainList += subjectToHTML(subject);
-	});
-
+	for (let i = 0; i < data[0].length; i++) {
+		mainList += subjectToHTML(data[0][i], data[1][i]);
+	}
 	return mainList + '</div>';
 }

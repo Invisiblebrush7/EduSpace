@@ -1,0 +1,26 @@
+[
+	{
+		"_name": "Teacher 1",
+		"_age": 10,
+		"_email": "email1@test.com",
+		"_id": 1
+	},
+	{
+		"_name": "Teacher 2",
+		"_age": 20,
+		"_email": "email2@test.com",
+		"_id": 2
+	},
+	{
+		"_name": "Teacher 3",
+		"_age": 30,
+		"_email": "email3@test.com",
+		"_id": 3
+	},
+	{
+		"_name": "Teacher 4",
+		"_age": 40,
+		"_email": "email4@test.com",
+		"_id": 4
+	}
+]
