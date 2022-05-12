@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('express');
-const DataHandlerTeacher = require('../controllers/dataHandlerTeacher');
 const router = express.Router();
 
 const TeacherSchema = require('../models/teacherModel');
@@ -24,6 +23,18 @@ router.route('/:id').get(async (req, res) => {
 	} catch (err) {
 		res.status(400).json({ msg: err });
 	}
+});
+
+router.route('/agregar').post(async (req, res) => {
+	let newTeacher = new TeacherSchema({
+		name: req.body.name,
+		email: req.body.email,
+		age: parseInt(req.body.age),
+		subjects: [],
+	});
+	await newTeacher.save();
+
+	res.redirect('/profesores');
 });
 
 module.exports = router;

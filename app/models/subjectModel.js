@@ -20,6 +20,10 @@ const SubjectSchema = new Schema({
 		type: ObjectId,
 		required: true,
 	},
+	comments: {
+		type: Array,
+		required: true,
+	},
 });
 
-module.exports = mongoose.model('SubjectSchema', SubjectSchema);
+module.exports = mongoose.model('Subject', SubjectSchema);

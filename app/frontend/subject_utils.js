@@ -2,7 +2,7 @@ const subjectsURL = 'http://localhost:3000/materias/get';
 
 function subjectToHTML(subject) {
 	let teacher = `
-	<div id="container-card">
+	<div class="container-card">
 		<div class="product-details">
 			<h1>${subject.name}</h1>
 			<p class="information">

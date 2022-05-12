@@ -45,6 +45,9 @@ app.get('/login', (req, res) => {
 app.get('/agregar_materia', (req, res) => {
 	res.sendFile('add_subject.html', { root: './app/views' });
 });
+app.get('/agregar_profesor', (req, res) => {
+	res.sendFile('add_teacher.html', { root: './app/views' });
+});
 
 app.use('/', router); // Use the file of router to get routes
 app.listen(port, () => {});

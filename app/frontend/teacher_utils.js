@@ -1,38 +1,51 @@
 const teachersURL = 'http://localhost:3000/maestros/get';
 
 function teacherToHTML(teacher) {
-	return `
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-5">
-            <div >
-                <div class="d-flex justify-content-start-sm" style="border: 1px solid #000">
-                    <button id="circle"></button>
-                    <div class="col-md-6 col-sm-3">
-                        <p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
-                        <p style="margin-left: 5px; font-size: 30px">${teacher.name}</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+	let subjects = '';
+	let comments = '';
 
-        <div class="col-md-6 col-sm-3" id="teacherInfo">
-            <div class="d-flex-column justify-content-center mt-5">
-               
-                <p style="text-align: center">Profesor(a)</p>
-                <hr style="width: 100%; text-align: center; color: #a73447" />
-                <strong>Materias que imparte:</strong>
-                <ul id="Courses">
-                    <li>
-                        <div class="d-flex justify-content-between">
-                            <p id="CourseName">${teacher.subjects.name}</p>
-                            <a class="fa fa-star checked" id="Grade">Comentarios</a>
-                        </div>
-                        <p id="CourseName">${teacher.email}</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
+	teacher.subjects.forEach((subject) => {
+		subjects += `
+        <li>
+            ${subject.name}
+        </li>`;
+		subject.comments.forEach((comment) => {
+			comments += `
+            <li>
+                ${comment}
+            </li>
+            `;
+		});
+	});
+
+	return `
+	<div class="container-card-teacher">
+		<div class="product-details">
+			<h1>${teacher.name}</h1>
+			<p class="information">
+				Edad: ${teacher.age}
+			</p>
+			<p class="information">
+				Email: ${teacher.email}
+			</p>
+			<p class="information">
+				Materias que imparte:
+			</p>
+            <ul>
+                ${subjects}
+            </ul>
+			<p class="information">
+				Comentarios Generales:
+			</p>
+            <ul>
+                ${comments}
+            </ul>
+            <div class="my-3"></div>
+			<a href="/profesores/delete/${teacher._id}">
+				<i class="fa-solid fa-trash"></i>
+			</a>			
+		</div>
+	</div>	    
            `;
 }
 
