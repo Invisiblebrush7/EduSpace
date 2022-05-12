@@ -2,14 +2,17 @@
 	text-align: center;
 }
 
-.main-body-container {
+/* .main-body-container {
 	width: 70%;
 	margin: 0 auto;
-}
+} */
 
 .fw-300 {
 	font-weight: 300;
 }
 .fs-20 {
 	font-size: 20px;
+}
+.fw-800 {
+	font-weight: 800;
 }

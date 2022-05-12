@@ -22,6 +22,9 @@ function teacherToHTML(teacher) {
 	<div class="container-card-teacher">
 		<div class="product-details">
 			<h1>${teacher.name}</h1>
+			<div class="d-flex justify-content-center">
+				<hr style="width: 535px; text-align: center; color: #a73447" />
+			</div>
 			<p class="information">
 				Edad: ${teacher.age}
 			</p>

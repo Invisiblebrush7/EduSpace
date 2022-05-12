@@ -5,7 +5,10 @@ function subjectToHTML(subject) {
 	<div class="container-card">
 		<div class="product-details">
 			<h1>${subject.name}</h1>
-			<p class="information">
+			<div class="d-flex justify-content-center">
+				<hr style="width: 535px; text-align: center; color: #a73447" />
+			</div>			
+			<p class="information fw-800">
 				Profesor(a): ${subject.teacher_name}
 			</p>
 			<p class="information">
