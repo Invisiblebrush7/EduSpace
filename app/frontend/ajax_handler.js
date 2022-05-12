@@ -17,3 +17,9 @@ async function loadTeacherByID(url) {
 	let teacher = await response.json();
 	return teacher;
 }
+async function loadSubjectByID(url) {
+	let response = await fetch(url);
+	if (response.status != 200) return undefined;
+	let subject = await response.json();
+	return subject;
+}

@@ -17,9 +17,13 @@ function subjectToHTML(subject) {
 			<a href="/materias" class="openModal" data-teacherID="${subject.teacherID}" data-subjectID="${subject._id}">
 				<i class="fa-solid fa-feather"></i>	
 			</a>
+			<a href="/ver" class="openSubjectModal" data-teacherID="${subject.teacherID}" data-name="${subject.name}" data-description="${subject.description}">
+				<i class="fa-solid fa-eye"></i>
+			</a>
 			<a href="/materias/delete/${subject._id}/${subject.teacherID}">
 				<i class="fa-solid fa-trash"></i>
 			</a>
+			
 		</div>
 	</div>
 	`;

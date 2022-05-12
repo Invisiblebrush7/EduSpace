@@ -43,11 +43,33 @@ function modalFunctionality() {
 	};
 }
 
-function changePathOfForm() {
-	let btn = document.querySelector('#createComment');
-	let form = document.querySelector('#new-comment-form');
-	btn.addEventListener('click', (e) => {
-		e.preventDefault();
-		form.action = document.baseURI + '/';
+function viewSubjectModalFunctionality() {
+	let modal = document.getElementById('view-subject-modal');
+
+	let span = document.querySelector('#closeSubjectBtn');
+
+	let btns = document.querySelectorAll('.openSubjectModal');
+
+	btns.forEach((btn) => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			let name = btn.dataset.name;
+			let description = btn.dataset.description;
+
+			modal.style.display = 'block';
+			document.querySelector('#subjectName').innerText = name;
+			document.querySelector('#subjectDescription').innerText = description;
+		});
 	});
+
+	span.addEventListener('click', (e) => {
+		e.preventDefault();
+		modal.style.display = 'none';
+	});
+
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = 'none';
+		}
+	};
 }
