@@ -26,6 +26,22 @@
 	<body>
 		<div id="navbar"></div>
 
+		<div id="new-comment-modal">
+			<div class="modal-content">
+				<span id="closeBtn">&times;</span>
+
+				<form class="card-form" id="new-comment-form" method="post" action="/">
+					<div class="input">
+						<input type="text" class="input-field" name="comment" />
+						<label class="input-label">Comentario</label>
+					</div>
+					<div class="action">
+						<button class="action-button" type="submit" id="createComment">Comentar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<div class="main-body-container">
 			<div class="d-flex-column justify-content-center mt-5">
 				<div class="d-flex justify-content-center">

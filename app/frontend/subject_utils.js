@@ -14,11 +14,14 @@ function subjectToHTML(subject) {
 			<p class="information">
 				${subject.description}
 			</p>
+			<a href="/materias" class="openModal" data-teacherID="${subject.teacherID}" data-subjectID="${subject._id}">
+				<i class="fa-solid fa-feather"></i>	
+			</a>
 			<a href="/materias/delete/${subject._id}/${subject.teacherID}">
 				<i class="fa-solid fa-trash"></i>
-			</a>			
+			</a>
 		</div>
-	</div>	
+	</div>
 	`;
 
 	return teacher;

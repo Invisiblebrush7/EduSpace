@@ -8,6 +8,7 @@ async function getSubjects() {
 
 	let container = document.getElementById('contenido');
 	container.innerHTML = subjectsListToHTML(subjects);
+	modalFunctionality();
 }
 async function getTeacherByID(id) {
 	if (event !== undefined) {
