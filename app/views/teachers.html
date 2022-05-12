@@ -21,112 +21,47 @@
     
     a.nav-link:hover {
         text-decoration-line: underline;
-        text-decoration-color: #A73447;
+        text-decoration-color: #a73447;
     }
     
-    #table {
-        background-color: rgba(207, 207, 207, 0.411);
-        min-height: 300px;
-    }
-    
-    #comments {
-        background-color: #C4C4C4;
-        min-height: 300px;
-    }
-    
-    span {
-        color: whitesmoke;
+    #circle {
+        width: 120px;
+        height: 120px;
+        padding: 10px 16px;
+        border-radius: 150px;
+        font-size: 24px;
+        line-height: 1.33;
+        margin-top: 25px;
+        margin-left: 20px;
     }
     
     .checked {
-        color: #A73447;
-    }
-    
-    textarea {
-        min-height: 100px;
-        width: 90%;
-        background-color: #f8f8f8;
-        font-size: 16px;
-        display: flex;
-    }
-    
-    .modal-content {
-        border-radius: 35px;
-        background-color: #C4C4C4;
-        min-height: 500px;
-        width: 80%;
-    }
-    
-    .modal-title {
-        margin-top: 40px;
+        color: #a73447;
     }
 </style>
 
 <body>
     <div id="navbar"></div>
 
-    <div class="d-flex-column    justify-content-center mt-5">
+    <div class="d-flex-column justify-content-center mt-5">
         <div class="d-flex justify-content-center">
-
-            <h1>Profesores</h1>
+            <h1>Encuentra al profesor que tu aprendizaje necesita</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <hr style="width: 535px; text-align: center; color: #a73447" />
         </div>
     </div>
 
-    <div class="d-flex justify-content-center">
-        <hr style="width:535px;text-align:center;color: #A73447;">
-    </div>
-    </div>
-
-    <div id="mainList"></div>
-
-
-    <!-- <div class="d-flex justify-content-center">
-        <div class="col-md-5 col-sm-3 " id="table">
-            <table class="table col-md-6 col-sm-3 ">
-                <thead>
-                    <tr>
-                        <th style="background-color: #C4C4C4;" scope="col">Profesores</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"> <a class="nav-link" href="#" style="color:black">Calculo</a>
-                        </th>
-
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <div class=" col-md-5 col-sm-3" id="comments">
-            <div class="d-flex flex-column  mt-4">
-
-                <div class="d-flex justify-content-center">
-                    <h4 id="CourseName"> Calulo</h4>
-                </div>
-
-
-
-                <div class="d-flex mt-2 justify-content-center ">
-
-
-                    <p id="Description" readonly>Description...</p>
-
-
-
-                </div>
-
-            </div>
-
+    <div class="container">
+        <div class="row" id="teacherCard">
 
         </div>
-    </div> -->
+    </div>
 
-    <nav class="navbar fixed-bottom  navbar-dark bg-dark justify-content-center ">
+    <nav class="navbar fixed-bottom navbar-dark bg-dark justify-content-center">
         <a class="navbar-brand" id="navTextBrand" href="#">EduSpace</a>
-
     </nav>
-    
+
     <script src="../frontend/utils.js"></script>
     <script src="../frontend/teacher_utils.js"></script>
     <script src="../frontend/ajax_handler.js"></script>
