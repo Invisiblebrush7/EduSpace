@@ -1,17 +1,24 @@
 const subjectsURL = 'http://localhost:3000/materias/get';
 
 function subjectToHTML(subject) {
-	let comments = '';
+	let teacher = `
+	<div id="container-card">
+		<div class="product-details">
+			<h1>${subject.name}</h1>
+			<p class="information">
+				Profesor(a): ${subject.teacher_name}
+			</p>
+			<p class="information">
+				${subject.description}
+			</p>
+			<a href="/materias/delete/${subject._id}/${subject.teacherID}">
+				<i class="fa-solid fa-trash"></i>
+			</a>			
+		</div>
+	</div>	
+	`;
 
-	//subject.comments.forEach((comment) => {
-	//    comments += `<li>${comment}</li>`;
-	//});
-
-	let teacherHTML = `
-		<td>${subject.name}</td>
-      	<td><p style="margin-left: 5px; font-size: 20px">${subject.description}</td>
-		`;
-	return teacherHTML;
+	return teacher;
 }
 
 function subjectsListToHTML(subjects) {

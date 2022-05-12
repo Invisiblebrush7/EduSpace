@@ -1,0 +1,15 @@
+.text-align-center {
+	text-align: center;
+}
+
+.main-body-container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.fw-300 {
+	font-weight: 300;
+}
+.fs-20 {
+	font-size: 20px;
+}

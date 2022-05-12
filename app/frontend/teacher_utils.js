@@ -1,27 +1,7 @@
 const teachersURL = 'http://localhost:3000/maestros/get';
 
-
-
-
 function teacherToHTML(teacher) {
-
-    console.log(teacher.subjects[0]);
-    //let teacherHTML = `
-    //	<div id="teacherCard">
-    //		<div class="d-flex justify-content-start-sm" style="border: 1px solid #000">
-    //			<button id="circle"></button>
-    //			<div class="col-md-6 col-sm-3">
-    //				<p style="margin-top: 20px; margin-left: 5px">Profesor(a)</p>
-    //				<p style="margin-left: 5px; font-size: 30px">${teacher.name}</p>
-    //				<p style="margin-left: 5px; font-size: 18px">Edad: ${teacher.age}</p>
-    //				<p style="margin-left: 5px; font-size: 18px">Email: ${teacher.email}</p>
-    //			</div>
-    //		</div>
-    //	</div>
-    //	`;
-
-    return `
-           
+	return `
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-5">
             <div >
                 <div class="d-flex justify-content-start-sm" style="border: 1px solid #000">
@@ -53,30 +33,15 @@ function teacherToHTML(teacher) {
             </div>
         </div>
         
-           `
-
+           `;
 }
-
 
 function teachersListToHTML(teachers) {
-    let mainList = '';
+	let mainList = '';
 
-    teachers.forEach((teacher) => {
-        mainList += teacherToHTML(teacher);
-    });
+	teachers.forEach((teacher) => {
+		mainList += teacherToHTML(teacher);
+	});
 
-    return mainList;
+	return mainList;
 }
-
-
-teacherCard.addEventListener("click", (e) => {
-    e.preventDefault();
-    let stars = e.target.id == 'Grade';
-
-    if (stars) {
-        console.log('Same');
-        window.open('/app/views/reviews.html');
-
-    }
-
-});

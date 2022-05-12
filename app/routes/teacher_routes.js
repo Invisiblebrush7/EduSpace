@@ -9,7 +9,6 @@ const TeacherSchema = require('../models/teacherModel');
 router.route('/get').get(async (req, res) => {
 	try {
 		const teachers = await TeacherSchema.find();
-		console.log(teachers);
 		if (!teachers) throw Error('No teachers found');
 		res.status(200).json(teachers);
 	} catch (err) {
