@@ -9,15 +9,16 @@ const StudentSchema = new Schema({
 	},
 	carreer: {
 		type: String,
-		required: true,
+		required: false,
 	},
 	semester: {
 		type: Number,
-		required: true,
+		required: false,
 	},
 	email: {
 		type: String,
 		required: true,
+		unique: true
 	},
 	password: {
 		type: String,

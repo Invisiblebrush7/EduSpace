@@ -1,19 +1,44 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-	<a class="navbar-brand" style="margin-left: 50px" href="/">EduSpace</a>
+    <a class="navbar-brand" style="margin-left: 50px" href="/">EduSpace</a>
 
-	<div class="collapse navbar-collapse d-flex flex-column justify-content-between" id="navbarSupportedContent">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="/profesores">Profesores</a>
-			</li>
+    <div
+        class="collapse navbar-collapse d-flex flex-column justify-content-between"
+        id="navbarSupportedContent"
+    >
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/teachers.html">Profesores</a>
+            </li>
 
-			<li class="nav-item">
-				<a class="nav-link" href="/materias">Materias </a>
-			</li>
+            <li class="nav-item">
+                <a class="nav-link" href="/courses.html">Materias </a>
+            </li>
 
-			<!-- <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="fa-solid fa-user" Style=" margin-left: 20px;"></i> </a>
-            </li> -->
-		</ul>
-	</div>
+            <!-- <li class="nav-item">
+				<a class="nav-link" href="/login">Login </a>
+			</li> -->
+
+            <li class="nav-item" id="login-button" role="button">
+                <a class="nav-link" href="/login.html"
+                    ><i
+                        class="fa-solid fa-user"
+                        Style=" margin-left: 20px;"
+                    ></i>
+                    Login
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="user-name"></a>
+            </li>
+            <li class="nav-item d-none" id="logout-button" role="button">
+                <a class="nav-link" id="logout-button-a"
+                    ><i
+                        class="fa-solid fa-lock"
+                        Style=" margin-left: 20px;"
+                    ></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>

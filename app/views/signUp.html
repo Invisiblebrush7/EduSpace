@@ -89,8 +89,10 @@
 			</div>
 
 			<div class="p-2 d-flex justify-content-center">
-				<form>
+				<form id="register-form" action="#">
 					<div class="form-row">
+						<div class="alert alert-danger d-none" role="alert" id="error">
+                        </div>
 						<div class="col-7">
 							<input type="text" class="form-control" placeholder="Correo electrónico" id="email" />
 						</div>
@@ -98,29 +100,31 @@
 							<input type="text" class="form-control" placeholder="Nombres" id="name" />
 						</div>
 						<div class="col">
-							<input type="text" class="form-control" placeholder="Contraseña" id="password" />
+							<input type="password" class="form-control" placeholder="Contraseña" id="password" />
 						</div>
 
 						<div class="col">
-							<input type="text" class="form-control" placeholder="Confirme su Contraseña" id="confirmPassword" />
+							<input type="password" class="form-control" placeholder="Confirme su Contraseña" id="confirmPassword" />
 						</div>
 
 						<div class="col d-flex justify-content-center">
 							<button class="btn" type="submit" id="submit">Crear Cuenta</button>
 						</div>
+						
 						<div class="col d-flex justify-content-center">
 							<h3 id="text">¿Ya estas registrado?</h3>
 						</div>
 
 						<div class="col d-flex justify-content-center">
 							<div class="col d-flex justify-content-center">
-								<a class="btn" type="submit" id="newUser" href="/login">Iniciar sesión</a>
+								<a class="btn" type="submit" id="newUser" href="/login.html">Iniciar sesión</a>
 							</div>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		<script src="../frontend/utils.js"></script>
+		<script src="/js/signup.js"></script>
+		<script src="/js/utils.js"></script>
 	</body>
 </html>

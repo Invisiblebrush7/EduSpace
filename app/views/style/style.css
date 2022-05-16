@@ -126,6 +126,7 @@ img {
 .product-details {
 	text-align: left;
 	overflow: scroll;
+	overflow-x: hidden;
 	padding: 30px;
 	height: 100%;
 	width: 100%;

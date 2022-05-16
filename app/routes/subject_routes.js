@@ -26,7 +26,7 @@ router.route('/get').get(async (req, res) => {
 	}
 });
 
-router.route('/delete/:id/:teacher_id').get(async (req, res) => {
+router.route('/delete/:id/:teacher_id').delete(async (req, res) => {
 	try {
 		let teacher = await TeacherSchema.findById(req.params.teacher_id);
 		if (!teacher) throw Error('No teachers found');
@@ -41,7 +41,7 @@ router.route('/delete/:id/:teacher_id').get(async (req, res) => {
 		});
 		await TeacherSchema.findByIdAndUpdate(req.params.teacher_id, { $set: { subjects: subjects } });
 
-		res.redirect('/materias');
+		res.json({message: 'Todo Cool'})
 	} catch (err) {
 		res.status(400).json({ msg: err });
 	}
@@ -64,7 +64,7 @@ router.route('/agregar').post(async (req, res) => {
 		subjects.push(newSubject);
 
 		await TeacherSchema.findByIdAndUpdate(teacher.id, { $set: { subjects: subjects } });
-		res.redirect('/materias');
+		res.json({message: 'Todo Cool'})
 	} catch (err) {
 		res.status(400).json({ msg: err });
 	}
@@ -73,7 +73,7 @@ router.route('/agregar').post(async (req, res) => {
 router.route('/:teacher_id/:subject_id/new_comment').post(async (req, res) => {
 	try {
 		let comment = req.body.comment;
-
+		console.log({body: req.body});
 		let teacher = await TeacherSchema.findById(req.params.teacher_id);
 
 		if (!teacher) throw Error('No teacher found');
@@ -91,7 +91,7 @@ router.route('/:teacher_id/:subject_id/new_comment').post(async (req, res) => {
 		});
 		await TeacherSchema.findByIdAndUpdate(teacher._id, { $set: { subjects: subjects } });
 
-		res.redirect('/materias');
+		res.json({message: 'Todo Cool'})
 	} catch (err) {
 		res.status(400).json({ msg: err });
 	}

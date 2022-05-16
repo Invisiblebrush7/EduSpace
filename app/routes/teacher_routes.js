@@ -34,7 +34,17 @@ router.route('/agregar').post(async (req, res) => {
 	});
 	await newTeacher.save();
 
-	res.redirect('/profesores');
+	res.json({message: 'Todo Cool'})
+});
+
+router.route('/delete/:id').delete(async (req, res) => {
+	try {
+		await TeacherSchema.findByIdAndDelete(req.params.id);
+		res.json({message: 'Todo Cool'})
+	} catch (error) {
+		res.status(400).json({message: 'No se pudo eliminar'})
+	}
+
 });
 
 module.exports = router;
